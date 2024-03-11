@@ -8,17 +8,20 @@ import { routes } from '../../navigation';
 
 export const IndexPage: FC = () => {
   return (
-    <Page title="Home Page">
+    <Page title='Home Page 123'>
       <p>
-        This page is a home page in this boilerplate. You can use the links below to visit other
-        pages with their own functionality.
+        This page is a home page in this boilerplate. You can use the links
+        below to visit other pages with their own functionality.
       </p>
-      <ul className="index-page__links">
-        {routes.map(({ path, title }) => title && (
-          <li className="index-page__link" key={path}>
-            <Link to={path}>{title}</Link>
-          </li>
-        ))}
+      <ul className='index-page__links'>
+        {routes.map(
+          ({ path, title }) =>
+            title && (
+              <li className='index-page__link' key={path}>
+                <Link to={path}>{title}</Link>
+              </li>
+            )
+        )}
       </ul>
     </Page>
   );
